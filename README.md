@@ -377,6 +377,9 @@ Running Sphinx v9.0.4
 loading translations [en]... done
 making output directory... done
 ...
+req_must_be_specified: failed
+                failed needs: 3 (REQ_001, REQ_004, REQ_005)
+                used filter: type == 'req' and len(specifies_back) == 0
 spec_must_be_covered: failed
                 failed needs: 1 (SPEC_001)
                 used filter: type == 'spec' and len(tests_back) == 0
@@ -386,9 +389,10 @@ Needs successfully exported
 build finished with problems, 1 warning (with warnings treated as errors).
 ```
 
-Note there is one uncovered specification (SPEC_001) and no orphaned tests.
-Opening the Traceability menu after opening the generated
-_build/html/index.html file on a browser should confirm this.
+Note that there are three requirements (REQ_001, REQ_004, REQ_005) which are
+not specified at all.  Also note there is one uncovered specification
+(SPEC_001) and no orphaned tests.  Opening the Traceability menu after opening
+the generated _build/html/index.html file on a browser should confirm this.
 
 #### Step 2: Complete Requirements Specifications
 
@@ -413,7 +417,8 @@ Try rebuilding the documentation from scratch after removing the _build folder:
 sphinx-build -W --keep-going . _build/html
 ```
 
-Make sure that there are not gaps in the specification.
+Make sure that there are not gaps in the specification.  The behavior of all
+equivalence classes need to be specified.
 
 #### Step 3: Complete the Test Plan
 

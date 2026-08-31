@@ -38,6 +38,7 @@ needs_warnings = {
     "req_must_be_REQ":  "type == 'req'  and not id.startswith('REQ_')",
     "spec_must_be_SPEC":  "type == 'spec'  and not id.startswith('SPEC_')",
     "test_must_be_TEST":  "type == 'test' and not id.startswith('TEST_')",
+    "req_must_be_specified": "type == 'req' and len(specifies_back) == 0",
     "spec_must_be_covered": "type == 'spec' and len(tests_back) == 0",
     "test_must_not_be_orphaned": "type == 'test' and len(tests) == 0",
 }
