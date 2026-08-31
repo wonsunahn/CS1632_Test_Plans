@@ -6,33 +6,33 @@ This is the test plan document.  Each test case is a ``.. test::`` block.
 is what creates the traceability -- the matrix is built from it, so a test with
 no ``:tests:`` is an orphan and a specification nobody links to is uncovered.
 
-.. test:: Passing in no arguments
+.. test:: System warns user when no argument is passed
    :id: TEST_001
    :tests: SPEC_002
 
    **Preconditions**: 
-   - The potus.jar file is in current folder.
+   = The potus.jar file is installed in the system.
    - Java 11 is installed on the machine.
 
    **Execution Steps**:
 
-   1. Open a shell and cd into the current folder.
+   1. Open a shell and cd to the folder where potus.jar is located.
    2. Run: "java -jar potus.jar"
 
    **Postconditions**:
 
    - The system informs the user that a command line argument is needed.
 
-.. test:: Passing in the argument 34
+.. test:: System determines age 34 is too young to be POTUS
    :id: TEST_002
 
    **Preconditions**: 
-   - The potus.jar file is in current folder.
+   = The potus.jar file is installed in the system.
    - Java 11 is installed on the machine.
 
    **Execution Steps**:
 
-   1. Open a shell and cd into the current folder.
+   1. Open a shell and cd to the folder where potus.jar is located.
    2. Run: "java -jar potus.jar 34"
 
    **Postconditions**:
