@@ -25,7 +25,9 @@ Fall Semester 2026 - Exercise 1
 
 * DUE: September 9 (Wednesday), 2026 before start of class
 
-**Classroom50 Link:** TBD
+**Classroom50 Link:** Published in the Exercise 1 channel on Teams.
+
+Please use the link to accept this exercise and create your repository.
 
 # Description
 
